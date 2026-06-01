@@ -1,711 +1,373 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background:
-        radial-gradient(circle at top right, rgba(201, 164, 92, 0.12), transparent 25%),
-        linear-gradient(180deg, #0b0b0b 0%, #111111 100%);
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    padding: 16px 8%;
-    background: rgba(10, 10, 10, 0.92);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    color: white;
-    text-decoration: none;
-}
-
-.brand div {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-}
-
-.brand strong {
-    font-size: 18px;
-}
-
-.brand span {
-    color: #c9a45c;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.logo {
-    width: 88px;
-    height: 88px;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
-}
-
-.menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 34px;
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    transition: 0.2s ease;
-}
-
-nav a:hover {
-    color: #c9a45c;
-}
-
-.hero {
-    min-height: 88vh;
-    padding: 80px 8%;
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: center;
-    gap: 54px;
-    background:
-        linear-gradient(rgba(15, 15, 15, 0.78), rgba(15, 15, 15, 0.96)),
-        radial-gradient(circle at top right, #3a2b17, #0f0f0f 58%);
-}
-
-.tag {
-    color: #c9a45c;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-h1 {
-    font-size: 78px;
-    line-height: 0.95;
-    margin-bottom: 22px;
-    letter-spacing: -2px;
-}
-
-h2 {
-    font-size: 48px;
-    margin-bottom: 12px;
-    letter-spacing: -1px;
-}
-
-.subtitle {
-    color: #c9a45c;
-    font-size: 31px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-
-.description {
-    max-width: 620px;
-    color: #d2d2d2;
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 34px;
-}
-
-.buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-}
-
-.main-btn,
-.second-btn {
-    padding: 15px 25px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.25s ease;
-}
-
-.main-btn {
-    background: linear-gradient(135deg, #e0bd72, #c9a45c);
-    color: #111;
-    box-shadow: 0 14px 30px rgba(201, 164, 92, 0.22);
-}
-
-.second-btn {
-    color: #c9a45c;
-    border: 1px solid #c9a45c;
-    background: rgba(255,255,255,0.02);
-}
-
-.main-btn:hover,
-.second-btn:hover {
-    transform: translateY(-2px);
-}
-
-.hero-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.hero-pills span {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #e7e7e7;
-    padding: 10px 14px;
-    border-radius: 999px;
-    font-size: 14px;
-}
-
-.hero-side {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.hero-image-box {
-    background: #151515;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 26px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-}
-
-.hero-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero-image-box p {
-    padding: 18px;
-    color: #c9a45c;
-    font-weight: bold;
-}
-
-.rating-card {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 18px;
-    border-radius: 20px;
-}
-
-.google-letter {
-    width: 44px;
-    height: 44px;
-    background: white;
-    color: #111;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-.rating-card p {
-    color: #aaa;
-    margin-top: 4px;
-}
-
-.section {
-    padding: 90px 8%;
-    border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-.section-heading {
-    margin-bottom: 28px;
-}
-
-.section-subtitle {
-    color: #bbb;
-    max-width: 760px;
-    line-height: 1.6;
-}
-
-.info-box,
-.price-list,
-.service-card,
-.gallery-card,
-.review-card,
-.map-box,
-.hours-card,
-.booking-card,
-.faq-card,
-.mini-cta-card {
-    background: rgba(255,255,255,0.035);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 22px;
-    align-items: stretch;
-}
-
-.about-box {
-    max-width: 860px;
-}
-
-.info-box {
-    padding: 26px;
-    border-radius: 24px;
-}
-
-.info-box p {
-    margin-bottom: 12px;
-    color: #ddd;
-    line-height: 1.7;
-    font-size: 17px;
-}
-
-.info-box p:last-child {
-    margin-bottom: 0;
-}
-
-.mini-cta-card {
-    border-radius: 24px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.mini-cta-card p {
-    color: #c9a45c;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.mini-cta-card h3 {
-    font-size: 30px;
-    margin-bottom: 22px;
-}
-
-.services-section {
-    background: linear-gradient(180deg, rgba(201,164,92,0.04), rgba(255,255,255,0));
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-}
-
-.service-card {
-    border-radius: 22px;
-    padding: 26px;
-}
-
-.service-card h3 {
-    color: white;
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #d8d8d8;
-    line-height: 1.6;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.gallery-card {
-    border-radius: 22px;
-    overflow: hidden;
-    transition: 0.25s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-4px);
-}
-
-.gallery-card img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-    display: block;
-}
-
-.gallery-card div {
-    padding: 15px 16px;
-}
-
-.gallery-card p {
-    color: #c9a45c;
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-.gallery-card span {
-    color: #aaa;
-    font-size: 14px;
-}
-
-.price-list {
-    max-width: 760px;
-    border-radius: 22px;
-    overflow: hidden;
-}
-
-.price-list div {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.price-list div:last-child {
-    border-bottom: none;
-}
-
-.price-list span {
-    color: #f1f1f1;
-    font-weight: 600;
-}
-
-.price-list strong {
-    color: #c9a45c;
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 18px;
-}
-
-.review-card {
-    border-radius: 22px;
-    padding: 24px;
-}
-
-.review-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 8px;
-}
-
-.review-top h3 {
-    font-size: 18px;
-}
-
-.review-top span {
-    color: #999;
-    font-size: 13px;
-    white-space: nowrap;
-}
-
-.review-source {
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.stars {
-    color: #c9a45c;
-    letter-spacing: 2px;
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.review-card p {
-    color: #ddd;
-    line-height: 1.6;
-}
-
-.hours-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.9fr;
-    gap: 22px;
-    max-width: 980px;
-}
-
-.hours-card,
-.booking-card {
-    border-radius: 24px;
-    padding: 26px;
-}
-
-.hours-card p {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.hours-card p:last-child {
-    border-bottom: none;
-}
-
-.hours-card span {
-    color: #c9a45c;
-    font-weight: bold;
-}
-
-.booking-card h3 {
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-.booking-card p {
-    color: #bbb;
-    margin-bottom: 22px;
-    line-height: 1.6;
-}
-
-.faq-section {
-    background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(201,164,92,0.03));
-}
-
-.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-}
-
-.faq-card {
-    border-radius: 22px;
-    padding: 24px;
-}
-
-.faq-card h3 {
-    color: #c9a45c;
-    margin-bottom: 10px;
-}
-
-.faq-card p {
-    color: #ddd;
-    line-height: 1.6;
-}
-
-.contact-section {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 30px;
-    align-items: start;
-}
-
-.contact-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 22px;
-}
-
-.map-box {
-    border-radius: 24px;
-    overflow: hidden;
-    min-height: 420px;
-}
-
-.map-box iframe {
-    width: 100%;
-    height: 420px;
-    border: 0;
-    display: block;
-}
-
-footer {
-    padding: 34px 8%;
-    background: #0a0a0a;
-    color: #999;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    display: grid;
-    grid-template-columns: 1.2fr auto auto;
-    gap: 24px;
-    align-items: center;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.footer-brand h3 {
-    color: white;
-    margin-bottom: 4px;
-}
-
-.footer-logo {
-    width: 68px;
-    height: 68px;
-    object-fit: contain;
-}
-
-.social-icons,
-.footer-links {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.social-icons a {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #c9a45c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.footer-links a {
-    color: #c9a45c;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-@media (max-width: 1050px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-card img {
-        height: 360px;
-    }
-}
-
-@media (max-width: 950px) {
-    .hero {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-section,
-    .hours-grid,
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 56px;
-    }
-
-    h2 {
-        font-size: 38px;
-    }
-
-    .hero-image {
-        height: 420px;
-    }
-}
-
-@media (max-width: 650px) {
-    header {
-        align-items: flex-start;
-    }
-
-    .brand div {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    nav {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 14px;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    h1 {
-        font-size: 43px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .subtitle {
-        font-size: 24px;
-    }
-
-    .description {
-        font-size: 17px;
-    }
-
-    .section {
-        padding: 70px 6%;
-    }
-
-    .hero {
-        padding: 60px 6%;
-    }
-
-    .price-list div,
-    .hours-card p {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .review-top {
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .hero-image {
-        height: 340px;
-    }
-
-    .gallery-card img {
-        height: 280px;
-    }
-
-    .map-box iframe {
-        height: 330px;
-    }
-}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Asfahas Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="#" class="brand">
+        <img src="images/logo.PNG" alt="Asfahas Barbershop logo" class="logo">
+        <div>
+            <strong>Asfahas</strong>
+            <span>Barbershop</span>
+        </div>
+    </a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+        <a href="#about">Om oss</a>
+        <a href="#gallery">Galleri</a>
+        <a href="#services">Tjänster</a>
+        <a href="#prices">Priser</a>
+        <a href="#reviews">Recensioner</a>
+        <a href="#hours">Öppettider</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <p class="tag">Skanstull · Stockholm</p>
+
+        <h1>Fräsch fade.<br>Ren finish.</h1>
+
+        <p class="subtitle">Ditt hår förtjänar bättre. Vi fixar det.</p>
+
+        <p class="description">
+            Herrklippning, fades, skin fade, skäggtrimning och barnklippning
+            hos Asfahas Barbershop på Blekingegatan 61.
+        </p>
+
+        <div class="buttons">
+            <a href="https://www.bokadirekt.se/" target="_blank" class="main-btn">Boka tid</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Blekingegatan%2061%2C%20116%2062%20Stockholm" target="_blank" class="second-btn">
+                Vägbeskrivning
+            </a>
+        </div>
+
+        <div class="hero-pills">
+            <span>Drop-in välkommen</span>
+            <span>Fades & skägg</span>
+            <span>Skanstull</span>
+        </div>
+    </div>
+
+    <div class="hero-side">
+        <div class="hero-image-box">
+            <img src="images/img.png" alt="Fade haircut" class="hero-image">
+            <p>Fade · Asfahas Barbershop</p>
+        </div>
+
+        <div class="rating-card">
+            <span class="google-letter">G</span>
+            <div>
+                <strong>4.4/5 på Google</strong>
+                <p>Riktiga kundrecensioner</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section about-section">
+    <div class="section-heading">
+        <p class="tag">Om oss</p>
+        <h2>Klippt med fokus på detaljer</h2>
+    </div>
+
+    <div class="about-grid">
+        <div class="info-box about-box">
+            <p>
+                Asfahas Barbershop ligger på Blekingegatan 61 i Skanstull och erbjuder
+                herrklippning, fades, skin fade, skäggtrimning och barnklippning.
+                Här får du en noggrann klippning med fokus på form, detaljer och en fräsch finish.
+            </p>
+        </div>
+
+        <div class="mini-cta-card">
+            <p>Dags att fräscha upp looken?</p>
+            <h3>Boka din nästa klippning idag.</h3>
+            <a href="https://www.bokadirekt.se/" target="_blank" class="main-btn">Boka tid</a>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="section">
+    <div class="section-heading">
+        <p class="tag">Portfolio</p>
+        <h2>Galleri</h2>
+        <p class="section-subtitle">Några exempel på tidigare klippningar.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <img src="images/cut1.png" alt="Fade haircut">
+            <div>
+                <p>Fade</p>
+                <span>Skarp finish</span>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/cut2.png" alt="Fade haircut">
+            <div>
+                <p>Fade</p>
+                <span>Noggrant klippt</span>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="images/cut3.png" alt="Fade haircut">
+            <div>
+                <p>Fade</p>
+                <span>Fräsch fade</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="section services-section">
+    <div class="section-heading">
+        <p class="tag">Tjänster</p>
+        <h2>Klippning, fade och skägg</h2>
+        <p class="section-subtitle">
+            Enkla tjänster, tydliga priser och fokus på ett resultat som känns rent.
+        </p>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>Herrklippning</h3>
+            <p>Klassisk eller modern herrklippning med fokus på form och detaljer.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Fade & skin fade</h3>
+            <p>Rena övergångar, skarpa linjer och en fräsch finish.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Skäggtrimning</h3>
+            <p>Trimning och formning som kompletterar hela looken.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Barnklippning</h3>
+            <p>Noggrann och enkel klippning för barn under 10 år.</p>
+        </div>
+    </div>
+</section>
+
+<section id="prices" class="section">
+    <div class="section-heading">
+        <p class="tag">Prislista</p>
+        <h2>Priser</h2>
+        <p class="section-subtitle">Tydliga priser för klippning och skägg.</p>
+    </div>
+
+    <div class="price-list">
+        <div>
+            <span>Herrklippning</span>
+            <strong>250 kr</strong>
+        </div>
+
+        <div>
+            <span>Skägg</span>
+            <strong>150 kr</strong>
+        </div>
+
+        <div>
+            <span>Barn under 10 år</span>
+            <strong>200 kr</strong>
+        </div>
+
+        <div>
+            <span>Pensionär</span>
+            <strong>200 kr</strong>
+        </div>
+
+        <div>
+            <span>Skin fade</span>
+            <strong>250 kr</strong>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="section">
+    <div class="section-heading">
+        <p class="tag">Kundomdömen</p>
+        <h2>Recensioner</h2>
+        <p class="section-subtitle">Riktiga Google-recensioner från kunder.</p>
+    </div>
+
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-top">
+                <h3>Mo</h3>
+                <span>för en dag sedan</span>
+            </div>
+            <p class="review-source">Recension från Google · 5/5 · Ny</p>
+            <p class="stars">★★★★★</p>
+            <p>
+                “I min åsikt den bästa frisören i stan. De är välkomnande,
+                vänliga och effektiva. 5 stjärnor!”
+            </p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <h3>Yafet Lemessa</h3>
+                <span>för en dag sedan</span>
+            </div>
+            <p class="review-source">Recension från Google · 5/5 · Ny</p>
+            <p class="stars">★★★★★</p>
+            <p>“Bästa barbershopen i stan.”</p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <h3>Daniel Jonsson</h3>
+                <span>för ett år sedan</span>
+            </div>
+            <p class="review-source">Recension från Google · 5/5</p>
+            <p class="stars">★★★★★</p>
+            <p>
+                “Trevlig personal. Både jag och grabben klipper oss alltid här
+                och blir alltid mycket nöjda.”
+            </p>
+        </div>
+
+        <div class="review-card">
+            <div class="review-top">
+                <h3>Lär Mig Koda !</h3>
+                <span>för 9 månader sedan</span>
+            </div>
+            <p class="review-source">Recension från Google · 5/5</p>
+            <p class="stars">★★★★★</p>
+            <p>“Fick en fantastisk cut från Asfahas, så bra.”</p>
+        </div>
+    </div>
+</section>
+
+<section id="hours" class="section hours-section">
+    <div class="section-heading">
+        <p class="tag">Öppettider</p>
+        <h2>Öppettider</h2>
+    </div>
+
+    <div class="hours-grid">
+        <div class="hours-card">
+            <p><strong>Måndag</strong><span>10:00–20:00</span></p>
+            <p><strong>Tisdag</strong><span>10:00–20:00</span></p>
+            <p><strong>Onsdag</strong><span>10:00–20:00</span></p>
+            <p><strong>Torsdag</strong><span>10:00–21:00</span></p>
+            <p><strong>Fredag</strong><span>10:00–21:00</span></p>
+            <p><strong>Lördag</strong><span>10:00–21:00</span></p>
+            <p><strong>Söndag</strong><span>13:00–18:00</span></p>
+        </div>
+
+        <div class="booking-card">
+            <p class="tag">Boka nu</p>
+            <h3>Dags för en ny klippning?</h3>
+            <p>Boka en tid eller kom förbi när det finns plats.</p>
+            <a href="https://www.bokadirekt.se/" target="_blank" class="main-btn">Boka tid</a>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="section faq-section">
+    <div class="section-heading">
+        <p class="tag">FAQ</p>
+        <h2>Bra att veta</h2>
+        <p class="section-subtitle">Kort information inför ditt besök.</p>
+    </div>
+
+    <div class="faq-grid">
+        <div class="faq-card">
+            <h3>Bokning eller drop-in?</h3>
+            <p>Bokning rekommenderas om du vill säkra en tid. Drop-in fungerar när det finns plats.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Adress</h3>
+            <p>Salongen ligger på Blekingegatan 61 i Skanstull, nära tunnelbana och buss.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Barnklippning</h3>
+            <p>Barn under 10 år klipps från 200 kr.</p>
+        </div>
+
+        <div class="faq-card">
+            <h3>Skäggtrimning</h3>
+            <p>Skäggtrimning erbjuds från 150 kr.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section contact-section">
+    <div>
+        <div class="section-heading">
+            <p class="tag">Hitta hit</p>
+            <h2>Kontakt & karta</h2>
+            <p class="section-subtitle">Asfahas Barbershop ligger på Blekingegatan 61 i Skanstull.</p>
+        </div>
+
+        <div class="info-box contact-box">
+            <p><strong>Adress:</strong> Blekingegatan 61, 116 62 Stockholm</p>
+            <p><strong>Telefon:</strong> 072-874 46 09</p>
+            <p><strong>Instagram:</strong> @Asfahas_barbershop</p>
+            <p><strong>Snapchat:</strong> asfahasbarbersh</p>
+
+            <div class="contact-actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Blekingegatan%2061%2C%20116%2062%20Stockholm" target="_blank" class="main-btn">
+                    Vägbeskrivning
+                </a>
+                <a href="https://www.instagram.com/Asfahas_barbershop/" target="_blank" class="second-btn">
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-box">
+        <iframe
+            src="https://www.google.com/maps?q=Blekingegatan%2061,%20116%2062%20Stockholm&t=k&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-brand">
+        <img src="images/logo.PNG" alt="Asfahas Barbershop logo" class="footer-logo">
+        <div>
+            <h3>Asfahas Barbershop</h3>
+            <p>Blekingegatan 61 · Skanstull</p>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/Asfahas_barbershop/" target="_blank">IG</a>
+        <a href="https://www.snapchat.com/add/asfahasbarbersh" target="_blank">SC</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Blekingegatan%2061%2C%20116%2062%20Stockholm" target="_blank">MAP</a>
+    </div>
+
+    <div class="footer-links">
+        <a href="#prices">Priser</a>
+        <a href="#hours">Öppettider</a>
+        <a href="#reviews">Recensioner</a>
+        <a href="https://www.bokadirekt.se/" target="_blank">Boka tid</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
