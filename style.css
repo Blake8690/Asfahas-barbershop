@@ -191,28 +191,6 @@ h2 {
     gap: 16px;
 }
 
-.hero-logo-card {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    padding: 16px;
-    border-radius: 22px;
-}
-
-.hero-logo-card img {
-    width: 86px;
-    height: 86px;
-    object-fit: contain;
-}
-
-.hero-logo-card p {
-    color: #c9a45c;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 .hero-image-box {
     background: #151515;
     border: 1px solid rgba(255,255,255,0.08);
@@ -352,16 +330,10 @@ h2 {
     padding: 26px;
 }
 
-.service-card span {
-    color: #c9a45c;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
 .service-card h3 {
     color: white;
     font-size: 22px;
-    margin: 14px 0 12px;
+    margin-bottom: 12px;
 }
 
 .service-card p {
