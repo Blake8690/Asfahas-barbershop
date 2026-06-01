@@ -140,7 +140,6 @@ h2 {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    margin-bottom: 24px;
 }
 
 .main-btn,
@@ -168,21 +167,6 @@ h2 {
 .main-btn:hover,
 .second-btn:hover {
     transform: translateY(-2px);
-}
-
-.hero-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.hero-pills span {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #e7e7e7;
-    padding: 10px 14px;
-    border-radius: 999px;
-    font-size: 14px;
 }
 
 .hero-side {
