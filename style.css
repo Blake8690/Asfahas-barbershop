@@ -43,10 +43,6 @@ button {
     font-family: inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
-
 header {
     position: fixed;
     top: 0;
@@ -114,10 +110,6 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero {
     min-height: 100vh;
     padding: 150px 6% 90px;
@@ -128,6 +120,11 @@ nav a:hover {
     background:
         radial-gradient(circle at top left, rgba(199, 145, 61, 0.18), transparent 35%),
         linear-gradient(135deg, #080808 0%, #151515 55%, #080808 100%);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 10;
 }
 
 .tag {
@@ -163,6 +160,8 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+    position: relative;
+    z-index: 20;
 }
 
 .main-btn,
@@ -175,6 +174,10 @@ nav a:hover {
     font-weight: 800;
     font-size: 0.95rem;
     transition: 0.25s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+    pointer-events: auto;
 }
 
 .main-btn {
@@ -201,6 +204,7 @@ nav a:hover {
 
 .hero-side {
     position: relative;
+    z-index: 1;
 }
 
 .hero-image-box {
@@ -222,46 +226,6 @@ nav a:hover {
     color: var(--gold);
     font-weight: 800;
 }
-
-.rating-card {
-    position: absolute;
-    left: -28px;
-    bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 20px;
-    border-radius: 22px;
-    background: rgba(18, 18, 18, 0.9);
-    border: 1px solid var(--border);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-}
-
-.google-letter {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: var(--white);
-    color: #111;
-    font-weight: 900;
-}
-
-.rating-card strong {
-    display: block;
-    font-size: 0.98rem;
-}
-
-.rating-card p {
-    color: var(--muted);
-    font-size: 0.88rem;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
 
 .section {
     padding: 95px 6%;
@@ -289,10 +253,6 @@ nav a:hover {
     border-radius: 28px;
     padding: 30px;
 }
-
-/* =========================
-   ABOUT
-========================= */
 
 .about-section {
     background: #0c0c0c;
@@ -329,10 +289,6 @@ nav a:hover {
     margin-bottom: 24px;
 }
 
-/* =========================
-   GALLERY
-========================= */
-
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -367,10 +323,6 @@ nav a:hover {
     font-weight: 800;
 }
 
-/* =========================
-   SERVICES
-========================= */
-
 .services-section {
     background: #0c0c0c;
 }
@@ -404,10 +356,6 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* =========================
-   PRICES
-========================= */
-
 .price-list {
     max-width: 820px;
     border-radius: 30px;
@@ -435,10 +383,6 @@ nav a:hover {
 .price-list strong {
     color: var(--gold);
 }
-
-/* =========================
-   REVIEWS
-========================= */
 
 .reviews-grid {
     display: grid;
@@ -480,10 +424,6 @@ nav a:hover {
     color: var(--muted);
     font-size: 0.95rem;
 }
-
-/* =========================
-   HOURS
-========================= */
 
 .hours-section {
     background: #0c0c0c;
@@ -538,10 +478,6 @@ nav a:hover {
     margin-bottom: 22px;
 }
 
-/* =========================
-   FAQ
-========================= */
-
 .faq-section {
     background: #080808;
 }
@@ -568,10 +504,6 @@ nav a:hover {
     color: var(--muted);
     font-size: 0.95rem;
 }
-
-/* =========================
-   CONTACT
-========================= */
 
 .contact-section {
     display: grid;
@@ -611,10 +543,6 @@ nav a:hover {
     min-height: 460px;
     border: none;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     padding: 36px 6%;
@@ -686,229 +614,94 @@ footer {
     color: var(--gold);
 }
 
-/* =========================
-   ADMIN PANEL
-========================= */
-
-.admin-page {
-    min-height: 100vh;
-    padding: 130px 20px 80px;
-    background:
-        radial-gradient(circle at top left, rgba(199, 145, 61, 0.22), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 30%),
-        linear-gradient(135deg, #070707 0%, #121212 50%, #090909 100%);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.admin-wrapper {
-    width: 100%;
-    max-width: 920px;
-}
-
-.admin-header {
-    text-align: center;
-    margin-bottom: 34px;
-}
-
-.admin-header h1 {
-    font-size: clamp(2.4rem, 5vw, 4.8rem);
-    line-height: 1;
-    margin: 10px 0 14px;
-    letter-spacing: -1.5px;
-}
-
-.admin-header p:last-child {
-    color: var(--muted);
-    font-size: 1.05rem;
-}
-
-.admin-card {
-    width: 100%;
-    max-width: 620px;
-    margin: 0 auto;
-    padding: 36px;
-    border-radius: 30px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035));
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow:
-        0 28px 90px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
-}
-
-.admin-card-top {
-    margin-bottom: 26px;
-}
-
-.admin-card-top h2 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-}
-
-.admin-card-top p {
-    color: var(--muted);
-    line-height: 1.7;
-}
-
-.admin-form label {
-    display: block;
-    margin: 18px 0 8px;
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-.admin-form input {
-    width: 100%;
-    padding: 15px 16px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(0, 0, 0, 0.38);
-    color: var(--white);
-    font-size: 1rem;
-    outline: none;
-    transition: 0.25s ease;
-}
-
-.admin-form input::placeholder {
-    color: rgba(255, 255, 255, 0.35);
-}
-
-.admin-form input:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 4px rgba(199, 145, 61, 0.14);
-}
-
-.admin-main-btn,
-.admin-second-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 48px;
-    padding: 14px 22px;
+.booking-back-link {
+    padding: 10px 18px;
     border-radius: 999px;
-    font-family: inherit;
-    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    color: var(--white);
+    font-size: 0.92rem;
     font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
     transition: 0.25s ease;
 }
 
-.admin-main-btn {
-    margin-top: 24px;
-    width: 100%;
-    border: none;
-    background: var(--gold);
-    color: #111;
-}
-
-.admin-main-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 36px rgba(199, 145, 61, 0.22);
-}
-
-.admin-second-btn {
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--white);
-}
-
-.admin-second-btn:hover {
+.booking-back-link:hover {
+    color: var(--gold);
     border-color: var(--gold);
-    color: var(--gold);
-    transform: translateY(-2px);
 }
 
-.admin-status-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 18px 20px;
-    border-radius: 20px;
-    background: rgba(199, 145, 61, 0.1);
-    border: 1px solid rgba(199, 145, 61, 0.2);
-    margin-bottom: 22px;
+.booking-page {
+    min-height: 100vh;
+    padding: 140px 6% 80px;
+    background:
+        radial-gradient(circle at top left, rgba(199, 145, 61, 0.2), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.06), transparent 30%),
+        linear-gradient(135deg, #070707 0%, #121212 55%, #080808 100%);
 }
 
-.admin-status-box span {
+.booking-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.booking-header {
+    max-width: 760px;
+    margin-bottom: 40px;
+}
+
+.booking-header h1 {
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.booking-header p:last-child {
     color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 620px;
 }
 
-.admin-status-box strong {
-    color: var(--gold);
-}
-
-.admin-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 10px 0 8px;
-}
-
-.admin-actions .admin-main-btn {
-    width: auto;
-    margin-top: 0;
-}
-
-.admin-actions .admin-second-btn {
-    margin-top: 0;
-}
-
-.admin-message {
-    min-height: 24px;
-    margin-top: 16px;
-    color: var(--gold);
-    font-weight: 700;
-}
-
-.admin-divider {
-    height: 1px;
-    margin: 30px 0;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.admin-next-grid {
+.booking-options {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
 }
 
-.admin-next-card {
-    padding: 20px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.045);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+.booking-option-card {
+    min-height: 230px;
+    padding: 28px;
+    border-radius: 28px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.25s ease;
 }
 
-.admin-next-card span {
-    display: inline-block;
+.booking-option-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(199, 145, 61, 0.45);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.booking-option-card h2 {
+    font-size: 1.45rem;
     margin-bottom: 12px;
-    color: var(--gold);
-    font-weight: 800;
-    font-size: 0.85rem;
 }
 
-.admin-next-card h3 {
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.admin-next-card p {
+.booking-option-card p {
     color: var(--muted);
     line-height: 1.65;
+    margin-bottom: 20px;
 }
 
-.hidden {
-    display: none;
+.booking-option-card strong {
+    color: var(--gold);
+    font-size: 0.95rem;
+    word-break: break-word;
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
 
 @media (max-width: 1100px) {
     .hero {
@@ -927,6 +720,10 @@ footer {
 
     .contact-section {
         grid-template-columns: 1fr;
+    }
+
+    .booking-options {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -971,11 +768,6 @@ footer {
         height: 390px;
     }
 
-    .rating-card {
-        position: static;
-        margin-top: 16px;
-    }
-
     .section {
         padding: 75px 5%;
     }
@@ -1007,23 +799,24 @@ footer {
         align-items: flex-start;
         flex-direction: column;
     }
+}
 
-    .admin-page {
-        padding: 115px 16px 60px;
+@media (max-width: 650px) {
+    .booking-page {
+        padding: 125px 5% 60px;
     }
 
-    .admin-card {
-        padding: 26px 20px;
-        border-radius: 24px;
+    .booking-options {
+        grid-template-columns: 1fr;
     }
 
-    .admin-actions {
-        flex-direction: column;
+    .booking-option-card {
+        min-height: auto;
     }
 
-    .admin-actions .admin-main-btn,
-    .admin-actions .admin-second-btn {
-        width: 100%;
+    .booking-back-link {
+        padding: 9px 14px;
+        font-size: 0.86rem;
     }
 }
 

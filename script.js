@@ -7,4 +7,13 @@ if (menuBtn && navMenu) {
     });
 }
 
+const bookingLinks = document.querySelectorAll(".booking-link");
+
+bookingLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.location.href = "./booking.html";
+    });
+});
+
 console.log("Asfahas Barbershop website loaded.");
