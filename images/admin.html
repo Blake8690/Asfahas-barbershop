@@ -8,45 +8,75 @@
 </head>
 <body>
 
-<section class="section admin-section">
-    <div class="section-heading">
-        <p class="tag">Admin</p>
-        <h1>Asfahas Barbershop</h1>
-        <p class="section-subtitle">Privat adminpanel för galleri och Instagram-captions.</p>
-    </div>
+<section class="admin-page">
+    <div class="admin-wrapper">
 
-    <div id="loginBox" class="info-box admin-box">
-        <h2>Logga in</h2>
-
-        <label for="email">E-post</label>
-        <input type="email" id="email" placeholder="E-post">
-
-        <label for="password">Lösenord</label>
-        <input type="password" id="password" placeholder="Lösenord">
-
-        <button id="loginBtn" class="main-btn">Logga in</button>
-
-        <p id="loginMessage" class="admin-message"></p>
-    </div>
-
-    <div id="adminPanel" class="info-box admin-box hidden">
-        <h2>Adminpanel</h2>
-        <p>Du är inloggad.</p>
-
-        <div class="admin-actions">
-            <button id="testFirestoreBtn" class="main-btn">Testa Firebase</button>
-            <button id="logoutBtn" class="second-btn">Logga ut</button>
+        <div class="admin-header">
+            <p class="tag">Admin</p>
+            <h1>Asfahas Barbershop</h1>
+            <p>Privat adminpanel för galleri och Instagram-captions.</p>
         </div>
 
-        <p id="adminMessage" class="admin-message"></p>
+        <div id="loginBox" class="admin-card">
+            <div class="admin-card-top">
+                <h2>Logga in</h2>
+                <p>Endast behörig admin kan komma åt panelen.</p>
+            </div>
 
-        <hr>
+            <div class="admin-form">
+                <label for="email">E-post</label>
+                <input type="email" id="email" placeholder="Skriv e-post">
 
-        <h3>Nästa steg</h3>
-        <p>
-            Här kommer vi senare lägga till bilduppladdning, galleri-hantering
-            och AI-caption generator för Instagram.
-        </p>
+                <label for="password">Lösenord</label>
+                <input type="password" id="password" placeholder="Skriv lösenord">
+
+                <button id="loginBtn" class="admin-main-btn">Logga in</button>
+
+                <p id="loginMessage" class="admin-message"></p>
+            </div>
+        </div>
+
+        <div id="adminPanel" class="admin-card hidden">
+            <div class="admin-card-top">
+                <h2>Adminpanel</h2>
+                <p>Du är inloggad. Här byggs gallerihantering och AI-caption generator.</p>
+            </div>
+
+            <div class="admin-status-box">
+                <span>Status</span>
+                <strong>Inloggad</strong>
+            </div>
+
+            <div class="admin-actions">
+                <button id="testFirestoreBtn" class="admin-main-btn">Testa Firebase</button>
+                <button id="logoutBtn" class="admin-second-btn">Logga ut</button>
+            </div>
+
+            <p id="adminMessage" class="admin-message"></p>
+
+            <div class="admin-divider"></div>
+
+            <div class="admin-next-grid">
+                <div class="admin-next-card">
+                    <span>01</span>
+                    <h3>Bildgalleri</h3>
+                    <p>Ladda upp och hantera bilder som senare kan visas på hemsidan.</p>
+                </div>
+
+                <div class="admin-next-card">
+                    <span>02</span>
+                    <h3>AI-captions</h3>
+                    <p>Generera tre Instagram-captionförslag och kopiera texten manuellt.</p>
+                </div>
+
+                <div class="admin-next-card">
+                    <span>03</span>
+                    <h3>Publicering</h3>
+                    <p>Välj vilka bilder som ska visas publikt på hemsidan.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
