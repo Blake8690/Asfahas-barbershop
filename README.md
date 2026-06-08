@@ -1,50 +1,72 @@
 # Asfahas Barbershop
 
-A modern and mobile-friendly website for Asfahas Barbershop in Skanstull, Stockholm.
+A responsive business website built for Asfahas Barbershop in Skanstull, Stockholm.
 
-Live site:  
-https://asfahas-barbershop.netlify.app/
+Live website: https://asfahasbarbershop.se  
+Booking page: https://www.bokadirekt.se/places/asfahas-barbershop-ab-136678
 
 ## About the project
 
-This is a static website built to present the barbershop’s services, prices, opening hours, customer reviews, contact information and gallery.
+This project was built as a real client website for a local barbershop.  
+The goal was to create a clean, professional and easy-to-use website where customers can quickly find information, view services, check prices, read reviews and book an appointment through Bokadirekt.
 
-The website does not include a custom booking system. Booking is handled through phone contact, Instagram or Snapchat to keep the project simple, stable and easy to maintain.
+The website is designed to be simple, fast and reliable, without using an advanced custom booking system. Instead, all bookings are handled through Bokadirekt to keep the solution stable and easy for the client to manage.
 
 ## Features
 
-- Responsive design for mobile and desktop
-- Clear hero section with call-to-action buttons
-- Booking/contact page
-- Gallery with haircut examples
+- Responsive design for desktop and mobile
+- Hero section with clear call-to-action buttons
+- Bokadirekt booking integration
 - Services section
 - Price list
-- Google customer reviews
+- Google reviews section
 - Opening hours
+- FAQ section
 - Contact information
-- Instagram, Snapchat and Google Maps links
+- Google Maps directions
+- Instagram and Snapchat links
+- Custom domain setup
 
-## Built with
+## Tech stack
 
 - HTML
 - CSS
 - JavaScript
-- GitHub
 - Netlify
+- Custom domain
 
-## Roadmap
+## Purpose
 
-- Phase 1: Static website
-- Phase 2: Custom domain
-- Phase 3: Optional Bokadirekt integration
-- Phase 4: Optional gallery/admin improvements
+The main purpose of the website is to help customers quickly:
 
-## Contact
+- Understand what services the barbershop offers
+- See prices and opening hours
+- Find the location
+- Book an appointment online
+- Contact or follow the barbershop on social media
 
-Asfahas Barbershop  
-Blekingegatan 61  
-116 62 Stockholm, Sweden  
+## What I learned
 
-Phone: 072-874 46 09  
-Instagram: @Asfahas_barbershop  
-Snapchat: asfahasbarbersh
+Through this project, I improved my understanding of:
+
+- Building a complete website for a real business
+- Structuring HTML, CSS and JavaScript files
+- Creating responsive layouts
+- Connecting a custom domain
+- Deploying a website with Netlify
+- Working with Git and GitHub
+- Making design decisions based on a client’s needs
+
+## Future improvements
+
+Possible future improvements include:
+
+- Updating the gallery with more haircut images
+- Improving the review section over time
+- Adding a stronger admin workflow for uploading images
+- Adding AI-generated Instagram caption suggestions for the barber
+- Further improving SEO and page performance
+
+## Status
+
+The website is live and connected to Bokadirekt.
