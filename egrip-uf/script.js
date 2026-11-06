@@ -1,28 +1,27 @@
-// Mobilmeny
-const menuBtn = document.querySelector('.menu-btn');
-const links = document.querySelector('.links');
-menuBtn.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
-  menuBtn.setAttribute('aria-expanded', open);
-});
-links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+// Navbar blir vit när man scrollar
+const nav = document.querySelector('.nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll); onScroll();
 
-// "Beställ" fyller i meddelandet
-const message = document.querySelector('textarea[name="meddelande"]');
-document.querySelectorAll('[data-product]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    message.value = `Hej! Jag vill beställa: ${btn.dataset.product}.`;
-  });
-});
+document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
 
-// Kontaktformulär – öppnar användarens mejlprogram (byt till t.ex. Formspree för riktig sändning)
-document.getElementById('contact-form').addEventListener('submit', e => {
+// Storleksval (beställningssidan)
+const sizes = document.querySelectorAll('.sizes button');
+const price = document.getElementById('price');
+let size = sizes[0]?.textContent;
+sizes.forEach(b => b.addEventListener('click', () => {
+  sizes.forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  size = b.textContent;
+  price.textContent = `${b.dataset.price} kr`;
+}));
+
+// Beställningsformulär – öppnar mejl (kan bytas mot Fortnox/Swish senare)
+const form = document.getElementById('order-form');
+form?.addEventListener('submit', e => {
   e.preventDefault();
-  const f = e.target;
-  const subject = encodeURIComponent(`Meddelande från ${f.namn.value}`);
-  const body = encodeURIComponent(`${f.meddelande.value}\n\n${f.namn.value} (${f.epost.value})`);
-  window.location.href = `mailto:egripuf@exempel.se?subject=${subject}&body=${body}`;
-  f.querySelector('.form-note').textContent = 'Tack! Ditt mejlprogram öppnas nu.';
+  const body = encodeURIComponent(
+    `Beställning: ${size} (${price.textContent})\n\nNamn: ${form.namn.value}\nE-post: ${form.epost.value}\nTelefon: ${form.telefon.value}\n\n${form.meddelande.value}`);
+  window.location.href = `mailto:egripuf@exempel.se?subject=${encodeURIComponent('Ny beställning')}&body=${body}`;
+  form.querySelector('.status').textContent = 'Tack! Ditt mejlprogram öppnas nu.';
 });
-
-document.getElementById('year').textContent = new Date().getFullYear();
