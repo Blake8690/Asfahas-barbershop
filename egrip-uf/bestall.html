@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beställ – Egrip UF</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter+Tight:wght@500;600;800&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <title>Beställ – Egrip UF</title>
 </head>
 <body>
-  <header class="nav">
-    <a href="index.html" class="logo">Egrip</a>
-    <nav class="nav-links">
-      <a href="index.html#produkt">Produkt</a>
-      <a href="index.html#om-oss">Om oss</a>
-      <a href="#team">Teamet</a>
-      <a href="bestall.html" class="cta active">Beställ →</a>
-    </nav>
+  <header class="top">
+    <button class="menu-btn" aria-label="Öppna meny"><span>☰</span> Meny</button>
+    <a href="index.html" class="logo"><i>E</i>Egrip</a>
+    <nav class="top-links"><a href="index.html#om-oss">Om oss</a><a href="bestall.html#team">Kontakt</a></nav>
   </header>
+  <div class="overlay" id="overlay">
+    <button class="menu-btn close" aria-label="Stäng meny"><span>✕</span> Stäng</button>
+    <a href="index.html">Hem</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="bestall.html#team">Teamet</a>
+  </div>
 
   <section class="page-hero">
-    <h1 class="display">Beställ din<span class="sans">[produktnamn]</span></h1>
+    <h1>Beställ din<br>[produktnamn].</h1>
+    <p>Enkelt, snabbt och tryggt.</p>
   </section>
 
-  <section class="order">
-    <div class="product-shot ph ph-sand">Produktbild</div>
+  <section class="section order">
+    <div class="ph ph-product">Produktbild</div>
     <div>
       <h2>[Produktnamn]</h2>
       <p class="price" id="price">199 kr</p>
-      <p class="mono blue">I lager</p>
+      <p class="stock">● I lager</p>
       <p class="desc">[Kort beskrivning av produkten.]</p>
 
       <p class="label">Färg: Svart</p>
@@ -47,25 +51,28 @@
         <input name="epost" type="email" placeholder="E-post" required>
         <input name="telefon" type="tel" placeholder="Telefon">
         <textarea name="meddelande" rows="3" placeholder="Adress / övrigt"></textarea>
-        <button type="submit" class="btn">Skicka beställning</button>
+        <button type="submit" class="btn btn-blue">Skicka beställning</button>
         <p class="status" role="status"></p>
       </form>
     </div>
   </section>
 
-  <section class="halftone" id="team">
-    <h2 class="display">Teamet<span class="sans">bakom Egrip</span></h2>
+  <section class="section" id="team">
+    <div class="center">
+      <h2 class="h2">Teamet bakom Egrip</h2>
+      <p class="sub">Hör av dig till oss – vi svarar snabbt!</p>
+    </div>
     <div class="team">
-      <div class="card"><div class="avatar duotone"></div><h4>[Namn]</h4><p>VD – [vad personen gör]</p><a href="mailto:namn@exempel.se">namn@exempel.se</a></div>
-      <div class="card"><div class="avatar duotone"></div><h4>[Namn]</h4><p>Ekonomi – [vad personen gör]</p><a href="mailto:namn@exempel.se">namn@exempel.se</a></div>
-      <div class="card"><div class="avatar duotone"></div><h4>[Namn]</h4><p>Marknad – [vad personen gör]</p><a href="#">@instagram</a></div>
-      <div class="card"><div class="avatar duotone"></div><h4>[Namn]</h4><p>Försäljning – [vad personen gör]</p><a href="tel:0700000000">070-000 00 00</a></div>
+      <div class="member"><div class="ph">Bild</div><h3>[Namn]</h3><p>VD – [vad personen gör]</p><a href="mailto:namn@exempel.se">namn@exempel.se</a></div>
+      <div class="member"><div class="ph">Bild</div><h3>[Namn]</h3><p>Ekonomi – [vad personen gör]</p><a href="mailto:namn@exempel.se">namn@exempel.se</a></div>
+      <div class="member"><div class="ph">Bild</div><h3>[Namn]</h3><p>Marknad – [vad personen gör]</p><a href="#">@instagram</a></div>
+      <div class="member"><div class="ph">Bild</div><h3>[Namn]</h3><p>Försäljning – [vad personen gör]</p><a href="tel:0700000000">070-000 00 00</a></div>
     </div>
   </section>
 
   <footer>
     <span>© <span class="year"></span> Egrip UF · Ung Företagsamhet</span>
-    <span><a href="https://instagram.com/egrip_uf" target="_blank" rel="noopener">@egrip_uf</a></span>
+    <a href="https://instagram.com/egrip_uf" target="_blank" rel="noopener">@egrip_uf</a>
   </footer>
   <script src="script.js"></script>
 </body>

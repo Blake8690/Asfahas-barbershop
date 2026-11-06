@@ -3,117 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Egrip UF</title>
-  <meta name="description" content="Egrip UF – [kort beskrivning].">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter+Tight:wght@500;600;800&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <title>Egrip UF</title>
+  <meta name="description" content="Egrip UF – [kort beskrivning].">
 </head>
 <body>
-  <header class="nav">
-    <a href="index.html" class="logo">Egrip</a>
-    <nav class="nav-links">
-      <a href="#produkt">Produkt</a>
-      <a href="#om-oss">Om oss</a>
-      <a href="#teamet">Teamet</a>
-      <a href="bestall.html" class="cta">Beställ →</a>
-    </nav>
+  <header class="top">
+    <button class="menu-btn" aria-label="Öppna meny"><span>☰</span> Meny</button>
+    <a href="index.html" class="logo"><i>E</i>Egrip</a>
+    <nav class="top-links"><a href="index.html#om-oss">Om oss</a><a href="bestall.html#team">Kontakt</a></nav>
   </header>
+  <div class="overlay" id="overlay">
+    <button class="menu-btn close" aria-label="Stäng meny"><span>✕</span> Stäng</button>
+    <a href="index.html">Hem</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="bestall.html">Beställ</a>
+    <a href="bestall.html#team">Teamet</a>
+  </div>
 
   <section class="hero">
-    <h1 class="display">[Er slogan här,]<span class="sans">gjord för dig</span></h1>
-    <p class="lead">[En mening om vad Egrip UF säljer och varför den är bra – enkelt och tydligt.]</p>
-    <div class="btns">
-      <a href="bestall.html" class="btn">Beställ nu</a>
-      <a href="#produkt" class="btn">Se produkten</a>
-    </div>
-
-    <div class="frame" id="produkt">
-      <h3>Möt [produktnamn]</h3>
-      <p class="sub">En produkt. En färg. Inga krångel.</p>
-      <div class="tiles">
-        <div class="tile">
-          <div class="col"><span class="mono">Färg</span><span class="big">Svart</span></div>
-          <div class="swatch" style="background:#111"></div>
-        </div>
-        <div class="tile">
-          <div class="col">
-            <span class="mono">Pris från</span>
-            <span class="big">199 <small>kr</small></span>
-          </div>
-          <div class="col" style="align-items:flex-end"><span>✳</span><span class="mono blue">Fri frakt*</span></div>
-        </div>
-        <div class="tile">
-          <div class="photo ph-green"></div>
-          <div class="col"><span class="pill">Nyhet</span><span class="note">[Kort säljande rad om produkten]</span></div>
-        </div>
-      </div>
-      <div class="wide">
-        <div class="product-row">
-          <div class="product-shot ph ph-sand">Produktbild</div>
-          <div>
-            <p class="mono" style="margin-bottom:12px">Om produkten</p>
-            <p style="font-size:1.3rem">[Beskriv produkten i 2–3 meningar: material, känsla, vem den passar.]</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1>Mer stil.<br>Mindre krångel.</h1>
+    <p>[En mening om vad Egrip UF säljer och varför den gör vardagen bättre.]</p>
+    <a href="bestall.html" class="btn btn-white">Beställ nu →</a>
+    <div style="height:56px"></div>
+    <div class="hero-img ph ph-product">Stor produktbild</div>
   </section>
 
   <section class="section" id="om-oss">
-    <h2 class="h2">Allt du behöver veta<br>om [produktnamn]</h2>
-    <div class="features">
-      <div class="feature-img ph-sky">
-        <div class="tile">
-          <div class="col"><span class="mono">Leveranstid</span><span class="big">3–5 <small>dagar</small></span></div>
-          <div class="col" style="align-items:flex-end"><span>✳</span><span class="mono blue">↓ [info]</span></div>
+    <div class="intro">
+      <h2>Kvalitet i varje<br>detalj – gjord<br>för dig.</h2>
+      <div>
+        <p>[Berätta om produkten och Egrip UF: vad den är gjord av, vem den passar och varför ni startade. Två–tre meningar räcker gott.]</p>
+        <div class="stats">
+          <div><b>+100</b><span>Sålda</span></div>
+          <div><b>+60</b><span>Nöjda kunder</span></div>
+          <div><b>5,0</b><span>Betyg</span></div>
         </div>
       </div>
-      <div>
-        <ul class="list">
-          <li><h4>Kvalitet</h4><span class="mono">001</span><p>[Varför produkten håller länge]</p></li>
-          <li><h4>Design</h4><span class="mono">002</span><p>[Vad som gör designen speciell]</p></li>
-          <li><h4>Hållbarhet</h4><span class="mono">003</span><p>[Material / lokal produktion]</p></li>
-          <li><h4>Enkelt</h4><span class="mono">004</span><p>[Beställ direkt, betala med Swish]</p></li>
-        </ul>
-        <a href="bestall.html" class="btn">Beställ nu</a>
-      </div>
     </div>
   </section>
 
-  <section class="halftone">
-    <h2 class="display">Enkelt att köpa<span class="sans">Skönt att äga</span></h2>
-    <div class="cards">
-      <div class="card">
-        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><circle cx="25" cy="25" r="23"/><path d="M25 2v46M25 25h23"/></svg>
-        <h4>[Värdering 1]</h4><p>[En mening om vad ni står för.]</p>
-      </div>
-      <div class="card">
-        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><circle cx="25" cy="25" r="23"/><ellipse cx="25" cy="25" rx="10" ry="23"/><path d="M2 25h46M5 14h40M5 36h40"/></svg>
-        <h4>[Värdering 2]</h4><p>[En mening om vad ni står för.]</p>
-      </div>
-      <div class="card">
-        <svg viewBox="0 0 50 50" fill="none" stroke="currentColor" stroke-width="2"><circle cx="25" cy="25" r="23"/><path d="M17 33l16-16M20 17h13v13"/></svg>
-        <h4>[Värdering 3]</h4><p>[En mening om vad ni står för.]</p>
-      </div>
+  <section class="section" style="padding-top:0">
+    <div class="gallery">
+      <div class="ph ph-wood">Bild 1</div>
+      <div class="ph ph-room">Bild 2</div>
+      <div class="ph ph-light">Bild 3</div>
+      <div class="ph ph-sofa">Bild 4</div>
+      <div class="ph ph-room">Bild 5</div>
     </div>
   </section>
 
-  <section class="section" id="teamet">
-    <div class="story">
-      <div class="duotone"></div>
-      <div>
-        <h4>Varför vi startade Egrip UF</h4>
-        <p>[Berätta kort hur idén föddes och vilka ni är. Två–tre meningar räcker.]</p>
-        <a href="bestall.html#team" class="btn">Möt teamet</a>
-      </div>
+  <section class="section">
+    <div class="center">
+      <h2 class="h2">Varför välja Egrip?</h2>
+      <p class="sub">[Kort mening om vad som gör er unika.]</p>
     </div>
+    <div class="features">
+      <div class="feature"><div class="num">1</div><h3>[Kvalitet]</h3><p>[Varför produkten håller länge.]</p></div>
+      <div class="feature"><div class="num">2</div><h3>[Design]</h3><p>[Vad som gör designen speciell.]</p></div>
+      <div class="feature"><div class="num">3</div><h3>[Hållbarhet]</h3><p>[Material, lokal produktion m.m.]</p></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Redo att få din egen?</h2>
+    <a href="bestall.html" class="btn btn-white">Beställ nu →</a>
   </section>
 
   <footer>
     <span>© <span class="year"></span> Egrip UF · Ung Företagsamhet</span>
-    <span><a href="https://instagram.com/egrip_uf" target="_blank" rel="noopener">@egrip_uf</a></span>
+    <a href="https://instagram.com/egrip_uf" target="_blank" rel="noopener">@egrip_uf</a>
   </footer>
   <script src="script.js"></script>
 </body>

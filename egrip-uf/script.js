@@ -1,7 +1,7 @@
-// Navbar blir vit när man scrollar
-const nav = document.querySelector('.nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
-window.addEventListener('scroll', onScroll); onScroll();
+// Meny (öppna/stäng)
+const overlay = document.getElementById('overlay');
+document.querySelectorAll('.menu-btn').forEach(b => b.addEventListener('click', () => overlay.classList.toggle('open')));
+overlay.querySelectorAll('a').forEach(a => a.addEventListener('click', () => overlay.classList.remove('open')));
 
 document.querySelectorAll('.year').forEach(el => el.textContent = new Date().getFullYear());
 
