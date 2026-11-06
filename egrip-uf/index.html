@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egrip UF</title>
+  <meta name="description" content="Egrip UF – ett UF-företag inom Ung Företagsamhet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#hem" class="logo">Egrip<span>UF</span></a>
+    <button class="menu-btn" aria-label="Öppna meny" aria-expanded="false">☰</button>
+    <nav class="links">
+      <a href="#om">Om oss</a>
+      <a href="#produkter">Produkter</a>
+      <a href="#vision">Vision</a>
+      <a href="#team">Teamet</a>
+      <a href="#kontakt" class="btn btn-small">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hem" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Ung Företagsamhet 2026/27</p>
+        <h1>Ett bättre grepp om vardagen.</h1>
+        <p class="lead">[Kort beskrivning av vad Egrip UF gör – en eller två meningar om er produkt och vem den är till för.]</p>
+        <div class="actions">
+          <a href="#produkter" class="btn">Se produkter</a>
+          <a href="#kontakt" class="btn btn-ghost">Kontakta oss</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="blob"></div>
+        <span>Egrip</span>
+      </div>
+    </section>
+
+    <section id="om" class="section">
+      <h2>Om oss</h2>
+      <p class="section-lead">[Berätta hur idén föddes, vilket problem ni löser och varför ni startade Egrip UF.]</p>
+      <div class="grid three">
+        <div class="card"><div class="icon">💡</div><h3>Idén</h3><p>[Vad är er affärsidé?]</p></div>
+        <div class="card"><div class="icon">🎯</div><h3>Målgrupp</h3><p>[Vilka är era kunder?]</p></div>
+        <div class="card"><div class="icon">🚀</div><h3>Målet</h3><p>[Vad vill ni uppnå under UF-året?]</p></div>
+      </div>
+    </section>
+
+    <section id="produkter" class="section alt">
+      <h2>Produkter</h2>
+      <p class="section-lead">[Kort intro till ert sortiment.]</p>
+      <div class="grid three">
+        <article class="card product">
+          <div class="product-img">Bild</div>
+          <h3>Produkt 1</h3>
+          <p>[Beskrivning av produkten.]</p>
+          <div class="price">199 kr</div>
+          <a href="#kontakt" class="btn btn-small" data-product="Produkt 1">Beställ</a>
+        </article>
+        <article class="card product">
+          <div class="product-img">Bild</div>
+          <h3>Produkt 2</h3>
+          <p>[Beskrivning av produkten.]</p>
+          <div class="price">249 kr</div>
+          <a href="#kontakt" class="btn btn-small" data-product="Produkt 2">Beställ</a>
+        </article>
+        <article class="card product">
+          <div class="product-img">Bild</div>
+          <h3>Paket</h3>
+          <p>[Beskrivning av paketet.]</p>
+          <div class="price">399 kr</div>
+          <a href="#kontakt" class="btn btn-small" data-product="Paket">Beställ</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="vision" class="section">
+      <h2>Vision &amp; hållbarhet</h2>
+      <div class="split">
+        <blockquote>”[Er vision i en mening.]”</blockquote>
+        <ul class="checks">
+          <li>[Hållbart material / lokal produktion]</li>
+          <li>[Hur ni tar socialt ansvar]</li>
+          <li>[Vad som gör er unika]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="team" class="section alt">
+      <h2>Teamet</h2>
+      <div class="grid four">
+        <div class="member"><div class="avatar">A</div><h3>Namn</h3><p>VD</p></div>
+        <div class="member"><div class="avatar">B</div><h3>Namn</h3><p>Ekonomiansvarig</p></div>
+        <div class="member"><div class="avatar">C</div><h3>Namn</h3><p>Marknadsföring</p></div>
+        <div class="member"><div class="avatar">D</div><h3>Namn</h3><p>Försäljning</p></div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <h2>Kontakt</h2>
+      <div class="split">
+        <div>
+          <p class="section-lead left">Vill du beställa eller har du frågor? Skriv till oss!</p>
+          <p>📧 <a href="mailto:egripuf@exempel.se">egripuf@exempel.se</a></p>
+          <p>📸 <a href="https://instagram.com/" target="_blank" rel="noopener">@egripuf</a></p>
+          <p>📍 [Skola, Ort]</p>
+        </div>
+        <form id="contact-form" class="card">
+          <label>Namn<input name="namn" required></label>
+          <label>E-post<input name="epost" type="email" required></label>
+          <label>Meddelande<textarea name="meddelande" rows="4" required></textarea></label>
+          <button type="submit" class="btn">Skicka</button>
+          <p class="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Egrip UF · Ett UF-företag inom <a href="https://ungforetagsamhet.se" target="_blank" rel="noopener">Ung Företagsamhet</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
