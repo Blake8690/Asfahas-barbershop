@@ -12,7 +12,6 @@ html {
     --cream: #f7f4ee;
     --white: #ffffff;
     --ink: #111111;
-    --black: #0b0b0b;
     --gold: #b8903e;
     --gold-bright: #d4ae62;
     --text: #111111;
@@ -324,7 +323,9 @@ nav a:hover {
 .marquee-section {
     padding: 20px 0;
     overflow: hidden;
-    background: var(--black);
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 @keyframes marquee {
@@ -347,11 +348,11 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 1.15rem;
-    color: #f3efe8;
+    color: var(--ink);
 }
 
 .marquee-dot {
-    color: var(--gold-bright);
+    color: var(--gold);
     font-style: normal;
     font-size: 0.8rem;
 }
@@ -363,15 +364,8 @@ nav a:hover {
 }
 
 .section-dark {
-    --text: #f3efe8;
-    --muted: #a39d94;
-    --border: rgba(255, 255, 255, 0.09);
-    --card: rgba(255, 255, 255, 0.035);
-    --gold: var(--gold-bright);
-    background:
-        radial-gradient(ellipse at top, rgba(212, 174, 98, 0.12), transparent 60%),
-        var(--black);
-    color: var(--text);
+    background: var(--cream);
+    border-top: 1px solid var(--border);
 }
 
 .section-tag {
@@ -420,16 +414,6 @@ nav a:hover {
     margin-bottom: 32px;
 }
 
-.section-dark .btn-secondary {
-    color: var(--text);
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-.section-dark .btn-secondary:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-}
-
 .about-img {
     border-radius: 6px;
     overflow: hidden;
@@ -468,12 +452,6 @@ nav a:hover {
     box-shadow: 0 2px 4px rgba(17, 17, 17, 0.05), 0 24px 48px rgba(17, 17, 17, 0.1);
 }
 
-.service-card:nth-child(2) {
-    --muted: #a39d94;
-    background: var(--black);
-    color: #f3efe8;
-}
-
 .service-card h3 {
     font-size: 1.45rem;
     line-height: 1.25;
@@ -494,11 +472,6 @@ nav a:hover {
     color: var(--gold);
     text-align: right;
     white-space: nowrap;
-}
-
-.service-card:nth-child(2) .service-price {
-    border-top-color: rgba(255, 255, 255, 0.1);
-    color: var(--gold-bright);
 }
 
 /* PRICES */
@@ -543,14 +516,6 @@ nav a:hover {
     border-radius: 14px;
     overflow: hidden;
     box-shadow: var(--shadow);
-}
-
-.gallery-card:nth-child(2) {
-    transform: translateY(40px);
-}
-
-.gallery-card:nth-child(2).reveal:not(.revealed) {
-    transform: translateY(64px);
 }
 
 .gallery-card img {
@@ -599,14 +564,13 @@ nav a:hover {
     padding: 32px 28px;
     border-radius: 14px;
     background: var(--card);
-    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: transform 0.3s;
 }
 
 .review-card:hover {
-    border-color: rgba(212, 174, 98, 0.4);
     transform: translateY(-4px);
 }
 
@@ -678,12 +642,10 @@ nav a:hover {
 }
 
 .hours-cta {
-    --gold: var(--gold-bright);
     padding: 48px 40px;
-    background:
-        radial-gradient(ellipse at top, rgba(212, 174, 98, 0.2), transparent 65%),
-        var(--black);
-    color: #f3efe8;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    border-top: 2px solid var(--gold);
     border-radius: 14px;
     display: flex;
     flex-direction: column;
@@ -697,22 +659,9 @@ nav a:hover {
 }
 
 .hours-cta p {
-    color: #a39d94;
+    color: var(--muted);
     font-size: 1rem;
     margin-bottom: 8px;
-}
-
-.section-dark .btn-primary,
-.hours-cta .btn-primary {
-    background: var(--gold-bright);
-    border-color: var(--gold-bright);
-    color: var(--ink);
-}
-
-.section-dark .btn-primary:hover,
-.hours-cta .btn-primary:hover {
-    background: #e2c07a;
-    border-color: #e2c07a;
 }
 
 /* FAQ */
@@ -728,12 +677,11 @@ nav a:hover {
     padding: 32px 28px;
     border-radius: 14px;
     background: var(--card);
-    border: 1px solid var(--border);
-    transition: border-color 0.3s, transform 0.3s;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
 }
 
 .faq-card:hover {
-    border-color: rgba(212, 174, 98, 0.4);
     transform: translateY(-4px);
 }
 
@@ -837,15 +785,14 @@ nav a:hover {
 
 /* FOOTER */
 footer {
-    --muted: #8f8a82;
     padding: 56px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 28px;
     flex-wrap: wrap;
-    background: var(--black);
-    color: #f3efe8;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
 }
 
 .footer-brand {
@@ -881,8 +828,8 @@ footer {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--gold-bright);
+    border: 1px solid var(--border);
+    color: var(--gold);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -890,9 +837,9 @@ footer {
 }
 
 .footer-socials a:hover {
-    background: var(--gold-bright);
-    border-color: var(--gold-bright);
-    color: var(--ink);
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
 }
 
 .footer-links {
@@ -908,7 +855,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--gold-bright);
+    color: var(--gold);
 }
 
 .footer-copy {
@@ -978,8 +925,6 @@ footer {
     .section-heading { margin-bottom: 44px; }
     .services-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-card:nth-child(2) { transform: none; }
-    .gallery-card:nth-child(2).reveal:not(.revealed) { transform: translateY(24px); }
     .gallery-card img { height: 380px; }
     .reviews-grid { grid-template-columns: 1fr; }
     .faq-grid { grid-template-columns: 1fr; }
